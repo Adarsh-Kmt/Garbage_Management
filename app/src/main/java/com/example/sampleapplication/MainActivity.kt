@@ -7,7 +7,10 @@ import android.widget.*
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -21,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonCheckData.setOnClickListener {
+
+            Intent(this, ResultsActivity::class.java).also{
+                startActivity(it)
+            }
 
 
         }

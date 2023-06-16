@@ -21,6 +21,8 @@ class ReportGarbageActivity : AppCompatActivity() {
             val checkedRadioButton = findViewById<RadioButton>(checkedRegion)
             val regionChosen = "garbage has been reported at " + checkedRadioButton.text
             Toast.makeText(applicationContext, regionChosen, Toast.LENGTH_LONG).show()
+
+            DatabaseHelper dbh = new DatabaseHelper(this);
             finish()
         }
 
